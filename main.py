@@ -15,6 +15,9 @@ length = int(input("Enter the length of the the object as in integer: "))
 width = int(input("Enter the width of the the object as in integer: "))
 height = int(input("Enter the height of the the object as in integer: "))
 
+def rect_area(length, width):
+    return (length * width)
+
 surface_area = rect_solid_area(length, width, height)
 
 print("Length = ", length, "Width = ", width, "Height = ", height)
