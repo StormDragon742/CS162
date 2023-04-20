@@ -1,4 +1,3 @@
-
 def fillArrays(text):
     file = open(text, "r")
     pArray = []
@@ -14,12 +13,12 @@ def fillArrays(text):
             eArray.append(i[1].strip())
     qArray = [pArray, sArray, eArray]
     file.close()
-    return(qArray)
+    return (qArray)
+
 
 def printQueue(text):
     queue = fillArrays(text)
-    length = len(queue)
-    for i in range(length):
+    while len(queue[2]) != 0:
         for x in range(3):
             if len(queue[0]) != 0:
                 print(queue[0][0])
@@ -36,7 +35,9 @@ def printQueue(text):
             print(queue[2][0])
             queue[2].pop(0)
 
-def Main():
+
+def main():
     printQueue("input queue.txt")
 
-Main()
+
+main()
